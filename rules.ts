@@ -38,22 +38,95 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
+      // {
+      //   type: "basic",
+      //   description: "Disable CMD + Tab to force Hyper Key usage",
+      //   from: {
+      //     key_code: "tab",
+      //     modifiers: {
+      //       mandatory: ["left_command"],
+      //     },
+      //   },
+      //   to: [
+      //     {
+      //       key_code: "tab",
+      //     },
+      //   ],
+      // },
+    ],
+  },
+  {
+    description: "gh to Switch Input Source",
+    manipulators: [
       {
+        conditions: [
+          {
+            type: "input_source_if",
+            input_sources: [
+              {
+                language: "en"
+              }
+            ]
+          }
+        ],
         type: "basic",
-        description: "Disable CMD + Tab to force Hyper Key usage",
         from: {
-          key_code: "tab",
+          simultaneous: [
+            {
+              key_code: "g",
+            },
+            {
+              key_code: "h",
+            }
+          ],
           modifiers: {
-            mandatory: ["left_command"],
-          },
+            optional: ["any"]
+          }
         },
         to: [
           {
-            key_code: "tab",
-          },
-        ],
+            select_input_source: {
+              language: "th",
+              input_source_id: "com.apple.keylayout.Thai",
+            }
+          }
+        ]
       },
-    ],
+      {
+        conditions: [
+          {
+            type: "input_source_if",
+            input_sources: [
+              {
+                language: "th"
+              }
+            ]
+          }
+        ],
+        type: "basic",
+        from: {
+          simultaneous: [
+            {
+              key_code: "g",
+            },
+            {
+              key_code: "h",
+            }
+          ],
+          modifiers: {
+            optional: ["any"]
+          }
+        },
+        to: [
+          {
+            select_input_source: {
+              language: "en",
+              input_source_id: "com.apple.keylayout.ABC",
+            }
+          }
+        ]
+      },
+    ]
   },
   ...createHyperSubLayers({
     // spacebar: open(
