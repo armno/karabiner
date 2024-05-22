@@ -73,7 +73,7 @@ const rules: KarabinerRules[] = [
       // 1: app("1Password"),
       a: app("Arc"),
       g: app("Google Chrome"),
-      // c: app("Notion Calendar"),
+      c: app("Google Chrome Canary"),
       v: app("Visual Studio Code"),
       // d: app("Discord"),
       s: app("Slack"),
@@ -86,7 +86,7 @@ const rules: KarabinerRules[] = [
       // ),
       // z: app("zoom.us"),
       // "M"arkdown (Obsidian.md)
-      // m: app("Obsidian"),
+      m: app("Microsoft Teams (work or school)"),
       f: app("Finder"),
       // r: app("Texts"),
       // "i"Message
