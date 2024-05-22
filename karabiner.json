@@ -46,19 +46,9 @@
             ]
           },
           {
-            "description": "gh to Switch Input Source",
+            "description": "Change input language with g + h (simple)",
             "manipulators": [
               {
-                "conditions": [
-                  {
-                    "type": "input_source_if",
-                    "input_sources": [
-                      {
-                        "language": "en"
-                      }
-                    ]
-                  }
-                ],
                 "type": "basic",
                 "from": {
                   "simultaneous": [
@@ -77,46 +67,10 @@
                 },
                 "to": [
                   {
-                    "select_input_source": {
-                      "language": "th",
-                      "input_source_id": "com.apple.keylayout.Thai"
-                    }
-                  }
-                ]
-              },
-              {
-                "conditions": [
-                  {
-                    "type": "input_source_if",
-                    "input_sources": [
-                      {
-                        "language": "th"
-                      }
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command"
                     ]
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "simultaneous": [
-                    {
-                      "key_code": "g"
-                    },
-                    {
-                      "key_code": "h"
-                    }
-                  ],
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "select_input_source": {
-                      "language": "en",
-                      "input_source_id": "com.apple.keylayout.ABC"
-                    }
                   }
                 ]
               }

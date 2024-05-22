@@ -56,78 +56,103 @@ const rules: KarabinerRules[] = [
     ],
   },
   {
-    description: "gh to Switch Input Source",
+    description: "Change input language with g + h (simple)",
     manipulators: [
       {
-        conditions: [
-          {
-            type: "input_source_if",
-            input_sources: [
-              {
-                language: "en"
-              }
-            ]
-          }
-        ],
         type: "basic",
         from: {
           simultaneous: [
-            {
-              key_code: "g",
-            },
-            {
-              key_code: "h",
-            }
+            { "key_code": "g" },
+            { "key_code": "h" }
           ],
           modifiers: {
-            optional: ["any"]
+            optional: [
+              "any"
+            ]
           }
         },
         to: [
           {
-            select_input_source: {
-              language: "th",
-              input_source_id: "com.apple.keylayout.Thai",
-            }
+            key_code: "spacebar",
+            modifiers: ["left_command"]
           }
         ]
-      },
-      {
-        conditions: [
-          {
-            type: "input_source_if",
-            input_sources: [
-              {
-                language: "th"
-              }
-            ]
-          }
-        ],
-        type: "basic",
-        from: {
-          simultaneous: [
-            {
-              key_code: "g",
-            },
-            {
-              key_code: "h",
-            }
-          ],
-          modifiers: {
-            optional: ["any"]
-          }
-        },
-        to: [
-          {
-            select_input_source: {
-              language: "en",
-              input_source_id: "com.apple.keylayout.ABC",
-            }
-          }
-        ]
-      },
+      }
     ]
   },
+  // {
+  //   description: "Change input language with g + h (advanced)",
+  //   manipulators: [
+  //     {
+  //       conditions: [
+  //         {
+  //           type: "input_source_if",
+  //           input_sources: [
+  //             {
+  //               language: "en"
+  //             }
+  //           ]
+  //         }
+  //       ],
+  //       type: "basic",
+  //       from: {
+  //         simultaneous: [
+  //           {
+  //             key_code: "g",
+  //           },
+  //           {
+  //             key_code: "h",
+  //           }
+  //         ],
+  //         modifiers: {
+  //           optional: ["any"]
+  //         }
+  //       },
+  //       to: [
+  //         {
+  //           select_input_source: {
+  //             language: "th",
+  //             input_source_id: "com.apple.keylayout.Thai",
+  //           }
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       conditions: [
+  //         {
+  //           type: "input_source_if",
+  //           input_sources: [
+  //             {
+  //               language: "th"
+  //             }
+  //           ]
+  //         }
+  //       ],
+  //       type: "basic",
+  //       from: {
+  //         simultaneous: [
+  //           {
+  //             key_code: "g",
+  //           },
+  //           {
+  //             key_code: "h",
+  //           }
+  //         ],
+  //         modifiers: {
+  //           optional: ["any"]
+  //         }
+  //       },
+  //       to: [
+  //         {
+  //           select_input_source: {
+  //             language: "en",
+  //             input_source_id: "com.apple.keylayout.ABC",
+  //           }
+  //         }
+  //       ]
+  //     },
+  //   ]
+  // },
   ...createHyperSubLayers({
     // spacebar: open(
     //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
