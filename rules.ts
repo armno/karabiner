@@ -38,6 +38,37 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
+      {
+        description: "Ctrl + Option + LShift + Cmd -> Hyper Key",
+        from: {
+          simultaneous: [
+            { key_code: "left_control" },
+            { key_code: "left_option" },
+            { key_code: "left_shift" },
+            { key_code: "left_command" }
+          ],
+          modifiers: {
+            optional: ["any"]
+          }
+        },
+        to: [
+          {
+            set_variable: {
+              name: "hyper",
+              value: 1,
+            },
+          },
+        ],
+        to_after_key_up: [
+          {
+            set_variable: {
+              name: "hyper",
+              value: 0,
+            },
+          },
+        ],
+        type: "basic",
+      },
       // {
       //   type: "basic",
       //   description: "Disable CMD + Tab to force Hyper Key usage",
