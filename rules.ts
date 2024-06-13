@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app } from "./utils";
+import { createHyperSubLayers, app, open } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -352,15 +352,15 @@ const rules: KarabinerRules[] = [
     // },
 
     // r = "Raycast"
-    // r: {
+    r: {
     //   c: open("raycast://extensions/thomas/color-picker/pick-color"),
     //   n: open("raycast://script-commands/dismiss-notifications"),
     //   l: open(
     //     "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
     //   ),
-    //   e: open(
-    //     "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-    //   ),
+      e: open(
+        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+      ),
     //   p: open("raycast://extensions/raycast/raycast/confetti"),
     //   a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
     //   s: open("raycast://extensions/peduarte/silent-mention/index"),
@@ -373,7 +373,7 @@ const rules: KarabinerRules[] = [
     //   2: open(
     //     "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
     //   ),
-    // },
+    },
   }),
 ];
 
