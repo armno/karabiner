@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, rectangle } from "./utils";
+import { createHyperSubLayers, app } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -31,11 +31,11 @@ const rules: KarabinerRules[] = [
             },
           },
         ],
-        to_if_alone: [
-          {
-            key_code: "escape",
-          },
-        ],
+        // to_if_alone: [
+        //   {
+        //     key_code: "escape",
+        //   },
+        // ],
         type: "basic",
       },
       {
@@ -69,21 +69,6 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
-      // {
-      //   type: "basic",
-      //   description: "Disable CMD + Tab to force Hyper Key usage",
-      //   from: {
-      //     key_code: "tab",
-      //     modifiers: {
-      //       mandatory: ["left_command"],
-      //     },
-      //   },
-      //   to: [
-      //     {
-      //       key_code: "tab",
-      //     },
-      //   ],
-      // },
     ],
   },
   {
@@ -111,79 +96,29 @@ const rules: KarabinerRules[] = [
       }
     ]
   },
-  // {
-  //   description: "Change input language with g + h (advanced)",
-  //   manipulators: [
-  //     {
-  //       conditions: [
-  //         {
-  //           type: "input_source_if",
-  //           input_sources: [
-  //             {
-  //               language: "en"
-  //             }
-  //           ]
-  //         }
-  //       ],
-  //       type: "basic",
-  //       from: {
-  //         simultaneous: [
-  //           {
-  //             key_code: "g",
-  //           },
-  //           {
-  //             key_code: "h",
-  //           }
-  //         ],
-  //         modifiers: {
-  //           optional: ["any"]
-  //         }
-  //       },
-  //       to: [
-  //         {
-  //           select_input_source: {
-  //             language: "th",
-  //             input_source_id: "com.apple.keylayout.Thai",
-  //           }
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       conditions: [
-  //         {
-  //           type: "input_source_if",
-  //           input_sources: [
-  //             {
-  //               language: "th"
-  //             }
-  //           ]
-  //         }
-  //       ],
-  //       type: "basic",
-  //       from: {
-  //         simultaneous: [
-  //           {
-  //             key_code: "g",
-  //           },
-  //           {
-  //             key_code: "h",
-  //           }
-  //         ],
-  //         modifiers: {
-  //           optional: ["any"]
-  //         }
-  //       },
-  //       to: [
-  //         {
-  //           select_input_source: {
-  //             language: "en",
-  //             input_source_id: "com.apple.keylayout.ABC",
-  //           }
-  //         }
-  //       ]
-  //     },
-  //   ]
-  // },
+  {
+    description: "Hyper + ' to escape",
+    manipulators: [
+      {
+        type: "basic",
+        from: {
+          key_code: "quote",
+        },
+        to: [
+          {
+            key_code: "escape",
+          }
+        ],
+        conditions: [
+          {
+            "type": "variable_if",
+            "name": "hyper",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
   ...createHyperSubLayers({
     // spacebar: open(
     //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
@@ -201,7 +136,7 @@ const rules: KarabinerRules[] = [
     o: {
       // 1: app("1Password"),
       a: app("Arc"),
-      g: app("Google Chrome"),
+      // g: app("Google Chrome"),
       c: app("Google Chrome Canary"),
       v: app("Visual Studio Code"),
       // d: app("Discord"),
