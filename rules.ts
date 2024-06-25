@@ -150,7 +150,7 @@ const rules: KarabinerRules[] = [
       // ),
       // z: app("zoom.us"),
       // "M"arkdown (Obsidian.md)
-      m: app("Microsoft Teams (work or school)"),
+      m: app("Microsoft Teams"),
       f: app("Finder"),
       // r: app("Texts"),
       // "i"Message
