@@ -225,7 +225,7 @@ const rules: KarabinerRules[] = [
     //   r: open("https://reddit.com"),
     // },
     // k = "Open" applications
-    k: {
+    i: {
       // 1: app("1Password"),
       a: app("Arc"),
       // g: app("Google Chrome"),
