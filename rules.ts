@@ -119,98 +119,6 @@ const rules: KarabinerRules[] = [
       }
     ]
   },
-  {
-    description: "Hyper + j to down arrow",
-    manipulators: [
-      {
-        type: "basic",
-        from: {
-          key_code: "j",
-        },
-        to: [
-          {
-            key_code: "down_arrow",
-          }
-        ],
-        conditions: [
-          {
-            "type": "variable_if",
-            "name": "hyper",
-            "value": 1
-          }
-        ]
-      }
-    ],
-  },
-  {
-    description: "Hyper + k to up arrow",
-    manipulators: [
-      {
-        type: "basic",
-        from: {
-          key_code: "k",
-        },
-        to: [
-          {
-            key_code: "up_arrow",
-          }
-        ],
-        conditions: [
-          {
-            "type": "variable_if",
-            "name": "hyper",
-            "value": 1
-          }
-        ]
-      }
-    ],
-  },
-  {
-    description: "Hyper + h to left arrow",
-    manipulators: [
-      {
-        type: "basic",
-        from: {
-          key_code: "h",
-        },
-        to: [
-          {
-            key_code: "left_arrow",
-          }
-        ],
-        conditions: [
-          {
-            "type": "variable_if",
-            "name": "hyper",
-            "value": 1
-          }
-        ]
-      }
-    ] 
-  },
-  {
-    description: "Hyper + l to right arrow",
-    manipulators: [
-      {
-        type: "basic",
-        from: {
-          key_code: "l",
-        },
-        to: [
-          {
-            key_code: "right_arrow",
-          }
-        ],
-        conditions: [
-          {
-            "type": "variable_if",
-            "name": "hyper",
-            "value": 1
-          }
-        ]
-      }
-    ] 
-  },
   ...createHyperSubLayers({
     // spacebar: open(
     //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
@@ -397,19 +305,19 @@ const rules: KarabinerRules[] = [
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
     // so that hjkl work like they do in vim
-    // v: {
-    //   h: {
-    //     to: [{ key_code: "left_arrow" }],
-    //   },
-    //   j: {
-    //     to: [{ key_code: "down_arrow" }],
-    //   },
-    //   k: {
-    //     to: [{ key_code: "up_arrow" }],
-    //   },
-    //   l: {
-    //     to: [{ key_code: "right_arrow" }],
-    //   },
+    v: {
+      h: {
+        to: [{ key_code: "left_arrow" }],
+      },
+      j: {
+        to: [{ key_code: "down_arrow" }],
+      },
+      k: {
+        to: [{ key_code: "up_arrow" }],
+      },
+      l: {
+        to: [{ key_code: "right_arrow" }],
+      },
       // Magicmove via homerow.app
       // m: {
       //   to: [{ key_code: "f", modifiers: ["right_control"] }],
@@ -428,7 +336,7 @@ const rules: KarabinerRules[] = [
       // i: {
       //   to: [{ key_code: "page_up" }],
       // },
-    // },
+    },
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand
     // c: {
