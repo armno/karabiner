@@ -96,30 +96,40 @@ const rules: KarabinerRules[] = [
       }
     ]
   },
-  {
-    description: "Hyper + ' to escape",
-    manipulators: [
-      {
-        type: "basic",
-        from: {
-          key_code: "quote",
-        },
-        to: [
-          {
-            key_code: "escape",
-          }
-        ],
-        conditions: [
-          {
-            "type": "variable_if",
-            "name": "hyper",
-            "value": 1
-          }
-        ]
-      }
-    ]
-  },
   ...createHyperSubLayers({
+    quote: {
+      description: "Hyper + ' to escape",
+      to: [
+        {
+          key_code: "escape",
+        },
+      ],
+    },
+    n: {
+      description: "Hyper + n to -",
+      to: [
+        {
+          key_code: "hyphen",
+        },
+      ],
+    },
+    m: {
+      description: "Hyper + m to `",
+      to: [
+        {
+          key_code: "grave_accent_and_tilde",
+        },
+      ],
+    },
+    comma: {
+      description: "Hyper + , to ~",
+      to: [
+        {
+          key_code: "grave_accent_and_tilde",
+          modifiers: ["left_shift"],
+        },
+      ],
+    },
     // spacebar: open(
     //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
     // ),
