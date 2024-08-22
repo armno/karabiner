@@ -105,6 +105,22 @@ const rules: KarabinerRules[] = [
         },
       ],
     },
+    h: {
+      description: "Hyper + h to [",
+      to: [
+        {
+          key_code: "open_bracket",
+        },
+      ],
+    },
+    j: {
+      description: "Hyper + j to ]",
+      to: [
+        {
+          key_code: "close_bracket",
+        },
+      ],
+    },
     n: {
       description: "Hyper + n to -",
       to: [
