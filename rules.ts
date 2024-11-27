@@ -121,7 +121,7 @@ const rules: KarabinerRules[] = [
         },
       ],
     },
-    n: {
+    y: {
       description: "Hyper + n to -",
       to: [
         {
@@ -129,11 +129,29 @@ const rules: KarabinerRules[] = [
         },
       ],
     },
-    m: {
-      description: "Hyper + m to `",
+    u: {
+      description: "Hyper + u to `",
       to: [
         {
-          key_code: "grave_accent_and_tilde",
+          key_code: "equal_sign",
+        },
+      ],
+    },
+    n: {
+      description: "Hyper + n to {",
+      to: [
+        {
+          key_code: "open_bracket",
+          modifiers: ["left_shift"],
+        },
+      ],
+    },
+    m: {
+      description: "Hyper + m to }",
+      to: [
+        {
+          key_code: "close_bracket",
+          modifiers: ["left_shift"],
         },
       ],
     },
@@ -146,48 +164,15 @@ const rules: KarabinerRules[] = [
         },
       ],
     },
-    // spacebar: open(
-    //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    // ),
-    // b = "B"rowse
-    // b: {
-    //   t: open("https://twitter.com"),
-    //   // Quarterly "P"lan
-    //   p: open("https://qrtr.ly/plan"),
-    //   y: open("https://news.ycombinator.com"),
-    //   f: open("https://facebook.com"),
-    //   r: open("https://reddit.com"),
-    // },
-    // k = "Open" applications
     i: {
-      // 1: app("1Password"),
       a: app("Arc"),
-      // g: app("Google Chrome"),
       c: app("Google Chrome Canary"),
-      v: app("Visual Studio Code"),
-      // d: app("Discord"),
+      v: app("Cursor"),
       s: app("Slack"),
-      // e: app("Superhuman"),
-      // n: app("Notion"),
       t: app("iTerm"),
-      // Open todo list managed via *H*ypersonic
-      // h: open(
-      //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      // ),
-      // z: app("zoom.us"),
-      // "M"arkdown (Obsidian.md)
       m: app("Microsoft Teams"),
       f: app("Finder"),
-      // r: app("Texts"),
-      // "i"Message
-      // i: app("Texts"),
       p: app("Spotify"),
-      // a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
-      // w: open("Texts"),
-      // l: open(
-      //   "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      // ),
     },
 
     // w = "Window" via rectangle.app
@@ -317,9 +302,6 @@ const rules: KarabinerRules[] = [
     //       },
     //     ],
     //   },
-    //   e: open(
-    //     `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
-    //   ),
     //   // "D"o not disturb toggle
     //   d: open(
     //     `raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background`
