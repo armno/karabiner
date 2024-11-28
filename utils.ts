@@ -188,3 +188,17 @@ export function rectangle(name: string): LayerCommand {
 export function app(name: string): LayerCommand {
   return open(`-a '${name}.app'`);
 }
+
+/**
+ * Shortcut for "Hyper + key_code"
+ */
+export function hyperTo(key_code: KeyCode): LayerCommand {
+  return {
+    description: `Hyper + ${key_code}`,
+    to: [
+      {
+        key_code,
+      },
+    ],
+  };
+}

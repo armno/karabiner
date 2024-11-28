@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open } from "./utils";
+import { createHyperSubLayers, app, open, hyperTo } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -97,74 +97,26 @@ const rules: KarabinerRules[] = [
     ]
   },
   ...createHyperSubLayers({
-    quote: {
-      description: "Hyper + ' to escape",
-      to: [
-        {
-          key_code: "escape",
-        },
-      ],
-    },
-    h: {
-      description: "Hyper + h to [",
-      to: [
-        {
-          key_code: "open_bracket",
-        },
-      ],
-    },
-    j: {
-      description: "Hyper + j to ]",
-      to: [
-        {
-          key_code: "close_bracket",
-        },
-      ],
-    },
-    y: {
-      description: "Hyper + n to -",
-      to: [
-        {
-          key_code: "hyphen",
-        },
-      ],
-    },
-    u: {
-      description: "Hyper + u to `",
-      to: [
-        {
-          key_code: "equal_sign",
-        },
-      ],
-    },
-    n: {
-      description: "Hyper + n to {",
-      to: [
-        {
-          key_code: "open_bracket",
-          modifiers: ["left_shift"],
-        },
-      ],
-    },
-    m: {
-      description: "Hyper + m to }",
-      to: [
-        {
-          key_code: "close_bracket",
-          modifiers: ["left_shift"],
-        },
-      ],
-    },
-    comma: {
-      description: "Hyper + , to ~",
-      to: [
-        {
-          key_code: "grave_accent_and_tilde",
-          modifiers: ["left_shift"],
-        },
-      ],
-    },
-    i: {
+    quote: hyperTo("escape"),
+    // move top row down for my Corne keyboard to make typing in TH easier
+    q: hyperTo("1"),
+    w: hyperTo("2"),
+    e: hyperTo("3"),
+    r: hyperTo("4"),
+    t: hyperTo("5"),
+    y: hyperTo("6"),
+    u: hyperTo("7"),
+    i: hyperTo("8"),
+    o: hyperTo("9"),
+    p: hyperTo("0"),
+    h: hyperTo("open_bracket"),
+    j: hyperTo("close_bracket"),
+    k: hyperTo("backslash"),
+    n: hyperTo("hyphen"),
+    m: hyperTo("equal_sign"),
+    comma: hyperTo("grave_accent_and_tilde"),
+    // fast app switcher
+    right_option: {
       a: app("Arc"),
       c: app("Google Chrome Canary"),
       v: app("Cursor"),
@@ -326,49 +278,17 @@ const rules: KarabinerRules[] = [
       l: {
         to: [{ key_code: "right_arrow" }],
       },
-      // Magicmove via homerow.app
-      // m: {
-      //   to: [{ key_code: "f", modifiers: ["right_control"] }],
-      //   // TODO: Trigger Vim Easymotion when VSCode is focused
-      // },
-      // // Scroll mode via homerow.app
-      // s: {
-      //   to: [{ key_code: "j", modifiers: ["right_control"] }],
-      // },
-      // d: {
-      //   to: [{ key_code: "d", modifiers: ["right_shift", "right_command"] }],
-      // },
-      // u: {
-      //   to: [{ key_code: "page_down" }],
-      // },
-      // i: {
-      //   to: [{ key_code: "page_up" }],
-      // },
     },
-
-    // c = Musi*c* which isn't "m" because we want it to be on the left hand
-    // c: {
-    //   p: {
-    //     to: [{ key_code: "play_or_pause" }],
-    //   },
-    //   n: {
-    //     to: [{ key_code: "fastforward" }],
-    //   },
-    //   b: {
-    //     to: [{ key_code: "rewind" }],
-    //   },
-    // },
-
     // r = "Raycast"
-    r: {
+    // r: {
     //   c: open("raycast://extensions/thomas/color-picker/pick-color"),
     //   n: open("raycast://script-commands/dismiss-notifications"),
     //   l: open(
     //     "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
     //   ),
-      e: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-      ),
+      // e: open(
+      //   "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+      // ),
     //   p: open("raycast://extensions/raycast/raycast/confetti"),
     //   a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
     //   s: open("raycast://extensions/peduarte/silent-mention/index"),
@@ -381,7 +301,6 @@ const rules: KarabinerRules[] = [
     //   2: open(
     //     "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
     //   ),
-    },
   }),
 ];
 
