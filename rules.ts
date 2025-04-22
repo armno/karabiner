@@ -116,9 +116,9 @@ const rules: KarabinerRules[] = [
     m: hyperTo("equal_sign"),
     comma: hyperTo("grave_accent_and_tilde"),
     // fast app switcher
-    right_option: {
+    spacebar: {
       a: app("Arc"),
-      c: app("Google Chrome Canary"),
+      c: app("Google Chrome Dev"),
       v: app("Cursor"),
       s: app("Slack"),
       t: app("iTerm"),
