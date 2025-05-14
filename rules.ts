@@ -111,12 +111,12 @@ const rules: KarabinerRules[] = [
     p: hyperTo("0"),
     h: hyperTo("open_bracket"),
     j: hyperTo("close_bracket"),
-    k: hyperTo("backslash"),
+    period: hyperTo("backslash"),
     n: hyperTo("hyphen"),
     m: hyperTo("equal_sign"),
     comma: hyperTo("grave_accent_and_tilde"),
     // fast app switcher
-    spacebar: {
+    k: {
       a: app("Arc"),
       c: app("Google Chrome Dev"),
       v: app("Cursor"),
@@ -126,81 +126,6 @@ const rules: KarabinerRules[] = [
       f: app("Finder"),
       p: app("Spotify"),
     },
-
-    // w = "Window" via rectangle.app
-    // w: {
-    //   semicolon: {
-    //     description: "Window: Hide",
-    //     to: [
-    //       {
-    //         key_code: "h",
-    //         modifiers: ["right_command"],
-    //       },
-    //     ],
-    //   },
-    //   y: rectangle("previous-display"),
-    //   o: rectangle("next-display"),
-    //   k: rectangle("top-half"),
-    //   j: rectangle("bottom-half"),
-    //   h: rectangle("left-half"),
-    //   l: rectangle("right-half"),
-    //   f: rectangle("maximize"),
-    //   u: {
-    //     description: "Window: Previous Tab",
-    //     to: [
-    //       {
-    //         key_code: "tab",
-    //         modifiers: ["right_control", "right_shift"],
-    //       },
-    //     ],
-    //   },
-    //   i: {
-    //     description: "Window: Next Tab",
-    //     to: [
-    //       {
-    //         key_code: "tab",
-    //         modifiers: ["right_control"],
-    //       },
-    //     ],
-    //   },
-    //   n: {
-    //     description: "Window: Next Window",
-    //     to: [
-    //       {
-    //         key_code: "grave_accent_and_tilde",
-    //         modifiers: ["right_command"],
-    //       },
-    //     ],
-    //   },
-    //   b: {
-    //     description: "Window: Back",
-    //     to: [
-    //       {
-    //         key_code: "open_bracket",
-    //         modifiers: ["right_command"],
-    //       },
-    //     ],
-    //   },
-    //   // Note: No literal connection. Both f and n are already taken.
-    //   m: {
-    //     description: "Window: Forward",
-    //     to: [
-    //       {
-    //         key_code: "close_bracket",
-    //         modifiers: ["right_command"],
-    //       },
-    //     ],
-    //   },
-    //   d: {
-    //     description: "Window: Next display",
-    //     to: [
-    //       {
-    //         key_code: "right_arrow",
-    //         modifiers: ["right_control", "right_option", "right_command"],
-    //       },
-    //     ],
-    //   },
-    // },
 
     // s = "System"
     // s: {
