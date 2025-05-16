@@ -2189,7 +2189,7 @@
                                 ],
                                 "description": "Open -a 'Arc.app'",
                                 "from": {
-                                    "key_code": "a",
+                                    "key_code": "b",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Arc.app'" }],
@@ -2203,12 +2203,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Google Chrome Dev.app'",
+                                "description": "Open -a 'Google Chrome Canary.app'",
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Google Chrome Dev.app'" }],
+                                "to": [{ "shell_command": "open -a 'Google Chrome Canary.app'" }],
                                 "type": "basic"
                             },
                             {

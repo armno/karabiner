@@ -117,8 +117,8 @@ const rules: KarabinerRules[] = [
     comma: hyperTo("grave_accent_and_tilde"),
     // fast app switcher
     k: {
-      a: app("Arc"),
-      c: app("Google Chrome Dev"),
+      b: app("Arc"),
+      c: app("Google Chrome Canary"),
       v: app("Cursor"),
       s: app("Slack"),
       t: app("iTerm"),
