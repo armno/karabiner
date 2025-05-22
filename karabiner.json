@@ -2203,12 +2203,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Google Chrome Canary.app'",
+                                "description": "Open -a 'Google Chrome.app'",
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Google Chrome Canary.app'" }],
+                                "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
                                 "type": "basic"
                             },
                             {

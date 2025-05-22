@@ -118,7 +118,7 @@ const rules: KarabinerRules[] = [
     // fast app switcher
     k: {
       b: app("Arc"),
-      c: app("Google Chrome Canary"),
+      c: app("Google Chrome"),
       v: app("Cursor"),
       s: app("Slack"),
       t: app("iTerm"),
