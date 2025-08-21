@@ -2187,12 +2187,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Arc.app'",
+                                "description": "Open -a 'Google Chrome.app'",
                                 "from": {
-                                    "key_code": "b",
+                                    "key_code": "c",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Arc.app'" }],
+                                "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -2203,12 +2203,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Google Chrome.app'",
+                                "description": "Open -a 'Dia.app'",
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "d",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
+                                "to": [{ "shell_command": "open -a 'Dia.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -2251,28 +2251,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'iTerm.app'",
+                                "description": "Open -a 'Ghostty.app'",
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'iTerm.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_k",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Microsoft Teams.app'",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Microsoft Teams.app'" }],
+                                "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
                                 "type": "basic"
                             },
                             {

@@ -45,11 +45,11 @@ const rules: KarabinerRules[] = [
             { key_code: "left_control" },
             { key_code: "left_option" },
             { key_code: "left_shift" },
-            { key_code: "left_command" }
+            { key_code: "left_command" },
           ],
           modifiers: {
-            optional: ["any"]
-          }
+            optional: ["any"],
+          },
         },
         to: [
           {
@@ -77,24 +77,19 @@ const rules: KarabinerRules[] = [
       {
         type: "basic",
         from: {
-          simultaneous: [
-            { "key_code": "g" },
-            { "key_code": "h" }
-          ],
+          simultaneous: [{ key_code: "g" }, { key_code: "h" }],
           modifiers: {
-            optional: [
-              "any"
-            ]
-          }
+            optional: ["any"],
+          },
         },
         to: [
           {
             key_code: "spacebar",
-            modifiers: ["left_command"]
-          }
-        ]
-      }
-    ]
+            modifiers: ["left_command"],
+          },
+        ],
+      },
+    ],
   },
   ...createHyperSubLayers({
     quote: hyperTo("escape"),
@@ -117,12 +112,13 @@ const rules: KarabinerRules[] = [
     comma: hyperTo("grave_accent_and_tilde"),
     // fast app switcher
     k: {
-      b: app("Arc"),
+      // b: app("Arc"),
       c: app("Google Chrome"),
+      d: app("Dia"),
       v: app("Cursor"),
       s: app("Slack"),
-      t: app("iTerm"),
-      m: app("Microsoft Teams"),
+      t: app("Ghostty"),
+      // m: app("Microsoft Teams"),
       f: app("Finder"),
       p: app("Spotify"),
     },
@@ -211,9 +207,9 @@ const rules: KarabinerRules[] = [
     //   l: open(
     //     "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
     //   ),
-      // e: open(
-      //   "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-      // ),
+    // e: open(
+    //   "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+    // ),
     //   p: open("raycast://extensions/raycast/raycast/confetti"),
     //   a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
     //   s: open("raycast://extensions/peduarte/silent-mention/index"),
