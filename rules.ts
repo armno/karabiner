@@ -72,12 +72,12 @@ const rules: KarabinerRules[] = [
     ],
   },
   {
-    description: "Change input language with g + h (simple)",
+    description: "Change input language with d + k (simple)",
     manipulators: [
       {
         type: "basic",
         from: {
-          simultaneous: [{ key_code: "g" }, { key_code: "h" }],
+          simultaneous: [{ key_code: "d" }, { key_code: "k" }],
           modifiers: {
             optional: ["any"],
           },
@@ -117,7 +117,7 @@ const rules: KarabinerRules[] = [
       v: app("Cursor"),
       s: app("Slack"),
       t: app("Ghostty"),
-      // m: app("Microsoft Teams"),
+      m: app("Microsoft Teams (PWA)"),
       f: app("Finder"),
       p: app("Spotify"),
     },

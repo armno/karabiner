@@ -63,14 +63,14 @@
                         ]
                     },
                     {
-                        "description": "Change input language with g + h (simple)",
+                        "description": "Change input language with d + k (simple)",
                         "manipulators": [
                             {
                                 "from": {
                                     "modifiers": { "optional": ["any"] },
                                     "simultaneous": [
-                                        { "key_code": "g" },
-                                        { "key_code": "h" }
+                                        { "key_code": "d" },
+                                        { "key_code": "k" }
                                     ]
                                 },
                                 "to": [
@@ -2257,6 +2257,22 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Microsoft Teams (PWA).app'",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Microsoft Teams (PWA).app'" }],
                                 "type": "basic"
                             },
                             {
