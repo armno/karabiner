@@ -31,11 +31,6 @@ const rules: KarabinerRules[] = [
             },
           },
         ],
-        // to_if_alone: [
-        //   {
-        //     key_code: "escape",
-        //   },
-        // ],
         type: "basic",
       },
       {
@@ -72,12 +67,12 @@ const rules: KarabinerRules[] = [
     ],
   },
   {
-    description: "Change input language with d + k (simple)",
+    description: "Change input language with g + h (simple)",
     manipulators: [
       {
         type: "basic",
         from: {
-          simultaneous: [{ key_code: "d" }, { key_code: "k" }],
+          simultaneous: [{ key_code: "g" }, { key_code: "h" }],
           modifiers: {
             optional: ["any"],
           },
@@ -114,74 +109,18 @@ const rules: KarabinerRules[] = [
     k: {
       c: app("Google Chrome"),
       d: app("Helium"),
-      v: app("Cursor"),
+      v: app("Zed"),
       s: app("Slack"),
       t: app("Ghostty"),
       m: app("Microsoft Teams (PWA)"),
       f: app("Finder"),
       p: app("Spotify"),
     },
-
-    // s = "System"
-    // s: {
-    //   u: {
-    //     to: [
-    //       {
-    //         key_code: "volume_increment",
-    //       },
-    //     ],
-    //   },
-    //   j: {
-    //     to: [
-    //       {
-    //         key_code: "volume_decrement",
-    //       },
-    //     ],
-    //   },
-    //   i: {
-    //     to: [
-    //       {
-    //         key_code: "display_brightness_increment",
-    //       },
-    //     ],
-    //   },
-    //   k: {
-    //     to: [
-    //       {
-    //         key_code: "display_brightness_decrement",
-    //       },
-    //     ],
-    //   },
-    //   l: {
-    //     to: [
-    //       {
-    //         key_code: "q",
-    //         modifiers: ["right_control", "right_command"],
-    //       },
-    //     ],
-    //   },
-    //   p: {
-    //     to: [
-    //       {
-    //         key_code: "play_or_pause",
-    //       },
-    //     ],
-    //   },
-    //   semicolon: {
-    //     to: [
-    //       {
-    //         key_code: "fastforward",
-    //       },
-    //     ],
-    //   },
-    //   // "D"o not disturb toggle
-    //   d: open(
-    //     `raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background`
-    //   ),
-    //   // "T"heme
-    //   t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
-    //   c: open("raycast://extensions/raycast/system/open-camera"),
-    // },
+    // another layer of fast app switcher
+    l: {
+      c: app("Notion Calendar"),
+      m: app("Notion Mail"),
+    },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
     // so that hjkl work like they do in vim
@@ -199,28 +138,6 @@ const rules: KarabinerRules[] = [
         to: [{ key_code: "right_arrow" }],
       },
     },
-    // r = "Raycast"
-    // r: {
-    //   c: open("raycast://extensions/thomas/color-picker/pick-color"),
-    //   n: open("raycast://script-commands/dismiss-notifications"),
-    //   l: open(
-    //     "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-    //   ),
-    // e: open(
-    //   "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-    // ),
-    //   p: open("raycast://extensions/raycast/raycast/confetti"),
-    //   a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-    //   s: open("raycast://extensions/peduarte/silent-mention/index"),
-    //   h: open(
-    //     "raycast://extensions/raycast/clipboard-history/clipboard-history"
-    //   ),
-    //   1: open(
-    //     "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-    //   ),
-    //   2: open(
-    //     "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-    //   ),
   }),
 ];
 
