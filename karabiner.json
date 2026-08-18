@@ -63,27 +63,6 @@
                         ]
                     },
                     {
-                        "description": "Change input language with g + h (simple)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "modifiers": { "optional": ["any"] },
-                                    "simultaneous": [
-                                        { "key_code": "g" },
-                                        { "key_code": "h" }
-                                    ]
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Hyper Key + quote",
                         "manipulators": [
                             {
@@ -95,6 +74,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -205,6 +189,137 @@
                         ]
                     },
                     {
+                        "description": "Hyper Key + g",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_e",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_t",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_y",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_u",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_i",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_p",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_period",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_n",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_m",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_comma",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_v",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Change input language",
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hyper Key + q",
                         "manipulators": [
                             {
@@ -216,6 +331,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -341,6 +461,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -458,6 +583,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -583,6 +713,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -700,6 +835,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -825,6 +965,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -942,6 +1087,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -1067,6 +1217,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -1184,6 +1339,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -1309,6 +1469,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -1426,6 +1591,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -1551,6 +1721,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -1668,6 +1843,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -1793,6 +1973,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -1910,6 +2095,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -2035,6 +2225,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -2147,6 +2342,11 @@
                                 "conditions": [
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -2277,6 +2477,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Bitwarden.app'",
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Bitwarden.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'Google Chrome.app'",
                                 "from": {
                                     "key_code": "c",
@@ -2309,12 +2525,44 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Zed.app'",
+                                "description": "Open -a 'Finder.app'",
                                 "from": {
-                                    "key_code": "v",
+                                    "key_code": "f",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Zed.app'" }],
+                                "to": [{ "shell_command": "open -a 'Finder.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Microsoft Teams (PWA).app'",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Microsoft Teams (PWA).app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a 'Spotify.app'",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -2357,12 +2605,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Microsoft Teams (PWA).app'",
+                                "description": "Open -a 'Visual Studio Code.app'",
                                 "from": {
-                                    "key_code": "m",
+                                    "key_code": "v",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Microsoft Teams (PWA).app'" }],
+                                "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -2373,28 +2621,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Finder.app'",
+                                "description": "Open -a 'Zed.app'",
                                 "from": {
-                                    "key_code": "f",
+                                    "key_code": "z",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Finder.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_k",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Spotify.app'",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
+                                "to": [{ "shell_command": "open -a 'Zed.app'" }],
                                 "type": "basic"
                             }
                         ]
@@ -2406,6 +2638,11 @@
                                 "conditions": [
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -2543,22 +2780,6 @@
                                 },
                                 "to": [{ "shell_command": "open -a 'Notion Calendar.app'" }],
                                 "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_l",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Notion Mail.app'",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Notion Mail.app'" }],
-                                "type": "basic"
                             }
                         ]
                     },
@@ -2569,6 +2790,11 @@
                                 "conditions": [
                                     {
                                         "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
                                         "type": "variable_if",
                                         "value": 0
                                     },

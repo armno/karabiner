@@ -66,28 +66,38 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
-  {
-    description: "Change input language with g + h (simple)",
-    manipulators: [
-      {
-        type: "basic",
-        from: {
-          simultaneous: [{ key_code: "g" }, { key_code: "h" }],
-          modifiers: {
-            optional: ["any"],
-          },
-        },
-        to: [
-          {
-            key_code: "spacebar",
-            modifiers: ["left_command"],
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   description: "Change input language with g + h (simple)",
+  //   manipulators: [
+  //     {
+  //       type: "basic",
+  //       from: {
+  //         simultaneous: [{ key_code: "g" }, { key_code: "h" }],
+  //         modifiers: {
+  //           optional: ["any"],
+  //         },
+  //       },
+  //       to: [
+  //         {
+  //           key_code: "spacebar",
+  //           modifiers: ["left_command"],
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   ...createHyperSubLayers({
     quote: hyperTo("escape"),
+    // change input language (EN <-> TH)
+    g: {
+      description: "Change input language",
+      to: [
+        {
+          key_code: "spacebar",
+          modifiers: ["left_command"],
+        },
+      ],
+    },
     // move top row down for my Corne keyboard to make typing in TH easier
     q: hyperTo("1"),
     w: hyperTo("2"),
@@ -107,19 +117,20 @@ const rules: KarabinerRules[] = [
     comma: hyperTo("grave_accent_and_tilde"),
     // fast app switcher
     k: {
+      b: app("Bitwarden"),
       c: app("Google Chrome"),
       d: app("Helium"),
-      v: app("Zed"),
+      f: app("Finder"),
+      m: app("Microsoft Teams (PWA)"),
+      p: app("Spotify"),
       s: app("Slack"),
       t: app("Ghostty"),
-      m: app("Microsoft Teams (PWA)"),
-      f: app("Finder"),
-      p: app("Spotify"),
+      v: app("Visual Studio Code"),
+      z: app("Zed"),
     },
     // another layer of fast app switcher
     l: {
       c: app("Notion Calendar"),
-      m: app("Notion Mail"),
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
