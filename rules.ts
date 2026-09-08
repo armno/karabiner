@@ -119,9 +119,9 @@ const rules: KarabinerRules[] = [
     k: {
       b: app("Bitwarden"),
       c: app("Google Chrome"),
-      d: app("Helium"),
+      d: app("Safari"),
       f: app("Finder"),
-      m: app("Microsoft Teams (PWA)"),
+     // m: app("Microsoft Teams (PWA)"),
       p: app("Spotify"),
       s: app("Slack"),
       t: app("Ghostty"),

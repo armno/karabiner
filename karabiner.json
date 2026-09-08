@@ -2509,12 +2509,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Helium.app'",
+                                "description": "Open -a 'Safari.app'",
                                 "from": {
                                     "key_code": "d",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Helium.app'" }],
+                                "to": [{ "shell_command": "open -a 'Safari.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -2531,22 +2531,6 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Finder.app'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_k",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open -a 'Microsoft Teams (PWA).app'",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Microsoft Teams (PWA).app'" }],
                                 "type": "basic"
                             },
                             {
