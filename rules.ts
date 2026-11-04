@@ -88,6 +88,7 @@ const rules: KarabinerRules[] = [
   // },
   ...createHyperSubLayers({
     quote: hyperTo("escape"),
+    escape: hyperTo("grave_accent_and_tilde"),
     // change input language (EN <-> TH)
     g: {
       description: "Change input language",
@@ -116,18 +117,18 @@ const rules: KarabinerRules[] = [
     m: hyperTo("equal_sign"),
     comma: hyperTo("grave_accent_and_tilde"),
     // fast app switcher
-    a: app("Spotify"),
+    // a: app("Spotify"),
     b: app("Bitwarden"),
     c: app("Google Chrome"),
     d: app("Helium"),
-    f: app("Ghostty"),
-    k: app("Finder"),
+    k: app("Ghostty"),
     s: app("Slack"),
     x: app("Visual Studio Code"),
     z: app("Zed"),
     // another layer of fast app switcher
     l: {
       c: app("Calendar"),
+      f: app("Finder"),
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
