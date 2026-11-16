@@ -88,6 +88,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -245,6 +250,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -410,6 +420,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -551,6 +566,172 @@
                         ]
                     },
                     {
+                        "description": "Hyper Key + delete_or_backspace",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_quote",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_e",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_t",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_y",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_u",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_i",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_p",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_period",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_n",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_m",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_comma",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_c",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_d",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_s",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_v",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Show this cheat sheet",
+                                "from": {
+                                    "key_code": "delete_or_backspace",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g hammerspoon://toggle-cheatsheet" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hyper Key + q",
                         "manipulators": [
                             {
@@ -572,6 +753,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -737,6 +923,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -894,6 +1085,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -1059,6 +1255,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -1216,6 +1417,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -1381,6 +1587,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -1538,6 +1749,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -1703,6 +1919,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -1860,6 +2081,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -2025,6 +2251,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -2182,6 +2413,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -2347,6 +2583,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -2504,6 +2745,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -2669,6 +2915,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -2826,6 +3077,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -2991,6 +3247,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -3148,6 +3409,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -3313,6 +3579,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -3470,6 +3741,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -3635,6 +3911,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -3760,12 +4041,12 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "Open -a 'Ghostty.app'",
+                                "description": "Open -a 'Herdr.app'",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
+                                "to": [{ "shell_command": "open -a 'Herdr.app'" }],
                                 "type": "basic"
                             }
                         ]
@@ -3792,6 +4073,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -3957,6 +4243,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -4118,6 +4409,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_delete_or_backspace",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 0
@@ -4270,6 +4566,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },
@@ -4473,6 +4774,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_g",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_delete_or_backspace",
                                         "type": "variable_if",
                                         "value": 0
                                     },

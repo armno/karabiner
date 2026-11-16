@@ -1,6 +1,75 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, hyperTo } from "./utils";
+import { createCheatSheet } from "./cheatsheet";
+
+const hyperLayers: Parameters<typeof createHyperSubLayers>[0] = {
+  quote: hyperTo("escape"),
+  escape: hyperTo("grave_accent_and_tilde"),
+  // change input language (EN <-> TH)
+  g: {
+    description: "Change input language",
+    to: [
+      {
+        key_code: "spacebar",
+        modifiers: ["left_command"],
+      },
+    ],
+  },
+  delete_or_backspace: {
+    description: "Show this cheat sheet",
+    to: [{ shell_command: "open -g hammerspoon://toggle-cheatsheet" }],
+  },
+  // move top row down for my Corne keyboard to make typing in TH easier
+  q: hyperTo("1"),
+  w: hyperTo("2"),
+  e: hyperTo("3"),
+  r: hyperTo("4"),
+  t: hyperTo("5"),
+  y: hyperTo("6"),
+  u: hyperTo("7"),
+  i: hyperTo("8"),
+  o: hyperTo("9"),
+  p: hyperTo("0"),
+  h: hyperTo("open_bracket"),
+  j: hyperTo("close_bracket"),
+  period: hyperTo("backslash"),
+  n: hyperTo("hyphen"),
+  m: hyperTo("equal_sign"),
+  comma: hyperTo("grave_accent_and_tilde"),
+  // fast app switcher
+  // a: app("Spotify"),
+  b: app("Bitwarden"),
+  c: app("Google Chrome"),
+  d: app("Helium"),
+  // k: app("Ghostty"),
+  k: app("Herdr"),
+  s: app("Slack"),
+  x: app("Visual Studio Code"),
+  z: app("Zed"),
+  // another layer of fast app switcher
+  l: {
+    c: app("Calendar"),
+    f: app("Finder"),
+  },
+
+  // v = "moVe" which isn't "m" because we want it to be on the left hand
+  // so that hjkl work like they do in vim
+  v: {
+    h: {
+      to: [{ key_code: "left_arrow" }],
+    },
+    j: {
+      to: [{ key_code: "down_arrow" }],
+    },
+    k: {
+      to: [{ key_code: "up_arrow" }],
+    },
+    l: {
+      to: [{ key_code: "right_arrow" }],
+    },
+  },
+};
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -86,68 +155,7 @@ const rules: KarabinerRules[] = [
   //     },
   //   ],
   // },
-  ...createHyperSubLayers({
-    quote: hyperTo("escape"),
-    escape: hyperTo("grave_accent_and_tilde"),
-    // change input language (EN <-> TH)
-    g: {
-      description: "Change input language",
-      to: [
-        {
-          key_code: "spacebar",
-          modifiers: ["left_command"],
-        },
-      ],
-    },
-    // move top row down for my Corne keyboard to make typing in TH easier
-    q: hyperTo("1"),
-    w: hyperTo("2"),
-    e: hyperTo("3"),
-    r: hyperTo("4"),
-    t: hyperTo("5"),
-    y: hyperTo("6"),
-    u: hyperTo("7"),
-    i: hyperTo("8"),
-    o: hyperTo("9"),
-    p: hyperTo("0"),
-    h: hyperTo("open_bracket"),
-    j: hyperTo("close_bracket"),
-    period: hyperTo("backslash"),
-    n: hyperTo("hyphen"),
-    m: hyperTo("equal_sign"),
-    comma: hyperTo("grave_accent_and_tilde"),
-    // fast app switcher
-    // a: app("Spotify"),
-    b: app("Bitwarden"),
-    c: app("Google Chrome"),
-    d: app("Helium"),
-    k: app("Ghostty"),
-    s: app("Slack"),
-    x: app("Visual Studio Code"),
-    z: app("Zed"),
-    // another layer of fast app switcher
-    l: {
-      c: app("Calendar"),
-      f: app("Finder"),
-    },
-
-    // v = "moVe" which isn't "m" because we want it to be on the left hand
-    // so that hjkl work like they do in vim
-    v: {
-      h: {
-        to: [{ key_code: "left_arrow" }],
-      },
-      j: {
-        to: [{ key_code: "down_arrow" }],
-      },
-      k: {
-        to: [{ key_code: "up_arrow" }],
-      },
-      l: {
-        to: [{ key_code: "right_arrow" }],
-      },
-    },
-  }),
+  ...createHyperSubLayers(hyperLayers),
 ];
 
 fs.writeFileSync(
@@ -170,3 +178,5 @@ fs.writeFileSync(
     2
   )
 );
+
+fs.writeFileSync("cheatsheet.html", createCheatSheet(hyperLayers));
