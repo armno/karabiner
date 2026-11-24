@@ -22,7 +22,17 @@ const keyLabels: Record<string, string> = {
   down_arrow: "↓",
   up_arrow: "↑",
   right_arrow: "→",
+  display_brightness_decrement: "Brightness down",
+  display_brightness_increment: "Brightness up",
+  rewind: "Previous track",
+  play_or_pause: "Play / pause",
+  fastforward: "Next track",
+  mute: "Mute",
+  volume_decrement: "Volume down",
+  volume_increment: "Volume up",
 };
+
+const numberRow = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "hyphen", "equal_sign"];
 
 function keyLabel(key: string) {
   return keyLabels[key] ?? key.toUpperCase();
@@ -73,7 +83,11 @@ export function createCheatSheet(layers: HyperLayers) {
       mainRows.push(toRow(key, value));
       continue;
     }
-    const rows = Object.entries(value).map(([subKey, command]) => toRow(subKey, command));
+    // JavaScript lists number keys first and in numeric order (0 before 1),
+    // so put number row keys back in keyboard order.
+    const rows = Object.entries(value)
+      .sort(([first], [second]) => numberRow.indexOf(first) - numberRow.indexOf(second))
+      .map(([subKey, command]) => toRow(subKey, command));
     subLayers.push(renderGroup(`Hyper + ${keyLabel(key)}`, [renderList(rows)]));
   }
 
@@ -81,6 +95,12 @@ export function createCheatSheet(layers: HyperLayers) {
   const actions = mainRows.filter((row) => row.kind === "label" && !row.isApp);
   const remaps = mainRows.filter((row) => row.kind === "remap");
   const isDigit = (row: Row) => row.kind === "remap" && /^\d$/.test(row.output);
+
+  // Two sublayers per column, so a long sublayer gets its own column.
+  const subLayerColumns: string[] = [];
+  for (let index = 0; index < subLayers.length; index += 2) {
+    subLayerColumns.push(`<div>${subLayers.slice(index, index + 2).join("")}</div>`);
+  }
 
   const mainGroup = renderGroup("Hyper + …", [
     renderList(apps) + renderList(actions),
@@ -150,12 +170,12 @@ export function createCheatSheet(layers: HyperLayers) {
     column-gap: 28px;
   }
   .sublayers {
-    display: grid;
-    align-content: start;
-    row-gap: 22px;
+    display: flex;
+    gap: 32px;
     padding-left: 28px;
     border-left: 1px solid var(--rule);
   }
+  .sublayers > div { display: grid; align-content: start; row-gap: 22px; }
   h2 {
     margin: 0 0 10px;
     font-size: 13px;
@@ -198,7 +218,7 @@ export function createCheatSheet(layers: HyperLayers) {
   <div class="layout">
     ${mainGroup}
     <div class="sublayers">
-    ${subLayers.join("\n    ")}
+    ${subLayerColumns.join("\n    ")}
     </div>
   </div>
 </main>

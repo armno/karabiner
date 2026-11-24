@@ -12,13 +12,13 @@ Based on [@mxstbr's configurations and setup](https://github.com/mxstbr/karabine
 
 ## Development
 
+Requires [Bun](https://bun.sh).
+
 ```sh
-corepack enable # make yarn available
-# then
-yarn install
-yarn run build
+bun install
+bun run build
 # or
-yarn run watch
+bun run watch
 ```
 
 ## License

@@ -39,11 +39,11 @@ const hyperLayers: Parameters<typeof createHyperSubLayers>[0] = {
   comma: hyperTo("grave_accent_and_tilde"),
   // fast app switcher
   // a: app("Spotify"),
-  b: app("Bitwarden"),
+  // b: app("Bitwarden"),
   c: app("Google Chrome"),
   d: app("Helium"),
   // k: app("Ghostty"),
-  k: app("Herdr"),
+  k: app("Rex Beta"),
   s: app("Slack"),
   x: app("Visual Studio Code"),
   z: app("Zed"),
@@ -68,6 +68,18 @@ const hyperLayers: Parameters<typeof createHyperSubLayers>[0] = {
     l: {
       to: [{ key_code: "right_arrow" }],
     },
+  },
+
+  // f = "Function keys", same as the top row of a MacBook Air keyboard
+  f: {
+    1: { to: [{ key_code: "display_brightness_decrement" }] },
+    2: { to: [{ key_code: "display_brightness_increment" }] },
+    7: { to: [{ key_code: "rewind" }] },
+    8: { to: [{ key_code: "play_or_pause" }] },
+    9: { to: [{ key_code: "fastforward" }] },
+    0: { to: [{ key_code: "mute" }] },
+    hyphen: { to: [{ key_code: "volume_decrement" }] },
+    equal_sign: { to: [{ key_code: "volume_increment" }] },
   },
 };
 
@@ -170,6 +182,9 @@ fs.writeFileSync(
           name: "Default",
           complex_modifications: {
             rules,
+          },
+          virtual_hid_keyboard: {
+            keyboard_type_v2: "ansi",
           },
         },
       ],

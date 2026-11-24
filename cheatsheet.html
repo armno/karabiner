@@ -60,12 +60,12 @@
     column-gap: 28px;
   }
   .sublayers {
-    display: grid;
-    align-content: start;
-    row-gap: 22px;
+    display: flex;
+    gap: 32px;
     padding-left: 28px;
     border-left: 1px solid var(--rule);
   }
+  .sublayers > div { display: grid; align-content: start; row-gap: 22px; }
   h2 {
     margin: 0 0 10px;
     font-size: 13px;
@@ -108,17 +108,20 @@
   <div class="layout">
     <section>
       <h2>Hyper + …</h2>
-      <div class="columns"><div><ul><li><kbd>B</kbd><span class="value">Bitwarden</span></li><li><kbd>C</kbd><span class="value">Google Chrome</span></li><li><kbd>D</kbd><span class="value">Helium</span></li><li><kbd>K</kbd><span class="value">Herdr</span></li><li><kbd>S</kbd><span class="value">Slack</span></li><li><kbd>X</kbd><span class="value">Visual Studio Code</span></li><li><kbd>Z</kbd><span class="value">Zed</span></li></ul><ul><li><kbd>G</kbd><span class="value">Change input language</span></li><li><kbd>⌫</kbd><span class="value">Show this cheat sheet</span></li></ul></div><div><ul><li><kbd>Q</kbd><span class="value"><span class="arrow">→</span> <span class="output">1</span></span></li><li><kbd>W</kbd><span class="value"><span class="arrow">→</span> <span class="output">2</span></span></li><li><kbd>E</kbd><span class="value"><span class="arrow">→</span> <span class="output">3</span></span></li><li><kbd>R</kbd><span class="value"><span class="arrow">→</span> <span class="output">4</span></span></li><li><kbd>T</kbd><span class="value"><span class="arrow">→</span> <span class="output">5</span></span></li><li><kbd>Y</kbd><span class="value"><span class="arrow">→</span> <span class="output">6</span></span></li><li><kbd>U</kbd><span class="value"><span class="arrow">→</span> <span class="output">7</span></span></li><li><kbd>I</kbd><span class="value"><span class="arrow">→</span> <span class="output">8</span></span></li><li><kbd>O</kbd><span class="value"><span class="arrow">→</span> <span class="output">9</span></span></li><li><kbd>P</kbd><span class="value"><span class="arrow">→</span> <span class="output">0</span></span></li></ul></div><div><ul><li><kbd>'</kbd><span class="value"><span class="arrow">→</span> <span class="output">esc</span></span></li><li><kbd>esc</kbd><span class="value"><span class="arrow">→</span> <span class="output">`</span></span></li><li><kbd>H</kbd><span class="value"><span class="arrow">→</span> <span class="output">[</span></span></li><li><kbd>J</kbd><span class="value"><span class="arrow">→</span> <span class="output">]</span></span></li><li><kbd>.</kbd><span class="value"><span class="arrow">→</span> <span class="output">\</span></span></li><li><kbd>N</kbd><span class="value"><span class="arrow">→</span> <span class="output">-</span></span></li><li><kbd>M</kbd><span class="value"><span class="arrow">→</span> <span class="output">=</span></span></li><li><kbd>,</kbd><span class="value"><span class="arrow">→</span> <span class="output">`</span></span></li></ul></div></div>
+      <div class="columns"><div><ul><li><kbd>C</kbd><span class="value">Google Chrome</span></li><li><kbd>D</kbd><span class="value">Helium</span></li><li><kbd>K</kbd><span class="value">Rex Beta</span></li><li><kbd>S</kbd><span class="value">Slack</span></li><li><kbd>X</kbd><span class="value">Visual Studio Code</span></li><li><kbd>Z</kbd><span class="value">Zed</span></li></ul><ul><li><kbd>G</kbd><span class="value">Change input language</span></li><li><kbd>⌫</kbd><span class="value">Show this cheat sheet</span></li></ul></div><div><ul><li><kbd>Q</kbd><span class="value"><span class="arrow">→</span> <span class="output">1</span></span></li><li><kbd>W</kbd><span class="value"><span class="arrow">→</span> <span class="output">2</span></span></li><li><kbd>E</kbd><span class="value"><span class="arrow">→</span> <span class="output">3</span></span></li><li><kbd>R</kbd><span class="value"><span class="arrow">→</span> <span class="output">4</span></span></li><li><kbd>T</kbd><span class="value"><span class="arrow">→</span> <span class="output">5</span></span></li><li><kbd>Y</kbd><span class="value"><span class="arrow">→</span> <span class="output">6</span></span></li><li><kbd>U</kbd><span class="value"><span class="arrow">→</span> <span class="output">7</span></span></li><li><kbd>I</kbd><span class="value"><span class="arrow">→</span> <span class="output">8</span></span></li><li><kbd>O</kbd><span class="value"><span class="arrow">→</span> <span class="output">9</span></span></li><li><kbd>P</kbd><span class="value"><span class="arrow">→</span> <span class="output">0</span></span></li></ul></div><div><ul><li><kbd>'</kbd><span class="value"><span class="arrow">→</span> <span class="output">esc</span></span></li><li><kbd>esc</kbd><span class="value"><span class="arrow">→</span> <span class="output">`</span></span></li><li><kbd>H</kbd><span class="value"><span class="arrow">→</span> <span class="output">[</span></span></li><li><kbd>J</kbd><span class="value"><span class="arrow">→</span> <span class="output">]</span></span></li><li><kbd>.</kbd><span class="value"><span class="arrow">→</span> <span class="output">\</span></span></li><li><kbd>N</kbd><span class="value"><span class="arrow">→</span> <span class="output">-</span></span></li><li><kbd>M</kbd><span class="value"><span class="arrow">→</span> <span class="output">=</span></span></li><li><kbd>,</kbd><span class="value"><span class="arrow">→</span> <span class="output">`</span></span></li></ul></div></div>
     </section>
     <div class="sublayers">
-    <section>
+    <div><section>
       <h2>Hyper + L</h2>
       <div class="columns"><div><ul><li><kbd>C</kbd><span class="value">Calendar</span></li><li><kbd>F</kbd><span class="value">Finder</span></li></ul></div></div>
-    </section>
-    <section>
+    </section><section>
       <h2>Hyper + V</h2>
       <div class="columns"><div><ul><li><kbd>H</kbd><span class="value"><span class="arrow">→</span> <span class="output">←</span></span></li><li><kbd>J</kbd><span class="value"><span class="arrow">→</span> <span class="output">↓</span></span></li><li><kbd>K</kbd><span class="value"><span class="arrow">→</span> <span class="output">↑</span></span></li><li><kbd>L</kbd><span class="value"><span class="arrow">→</span> <span class="output">→</span></span></li></ul></div></div>
-    </section>
+    </section></div>
+    <div><section>
+      <h2>Hyper + F</h2>
+      <div class="columns"><div><ul><li><kbd>1</kbd><span class="value"><span class="arrow">→</span> <span class="output">Brightness down</span></span></li><li><kbd>2</kbd><span class="value"><span class="arrow">→</span> <span class="output">Brightness up</span></span></li><li><kbd>7</kbd><span class="value"><span class="arrow">→</span> <span class="output">Previous track</span></span></li><li><kbd>8</kbd><span class="value"><span class="arrow">→</span> <span class="output">Play / pause</span></span></li><li><kbd>9</kbd><span class="value"><span class="arrow">→</span> <span class="output">Next track</span></span></li><li><kbd>0</kbd><span class="value"><span class="arrow">→</span> <span class="output">Mute</span></span></li><li><kbd>-</kbd><span class="value"><span class="arrow">→</span> <span class="output">Volume down</span></span></li><li><kbd>=</kbd><span class="value"><span class="arrow">→</span> <span class="output">Volume up</span></span></li></ul></div></div>
+    </section></div>
     </div>
   </div>
 </main>
